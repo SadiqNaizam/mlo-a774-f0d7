@@ -117,7 +117,7 @@ const ProfilePage = () => {
                             </FormControl>
                             <FormMessage />
                           </FormItem>
-                        )}\
+                        )}
                       />
                       <FormField
                         control={profileForm.control}
@@ -130,7 +130,7 @@ const ProfilePage = () => {
                             </FormControl>
                             <FormMessage />
                           </FormItem>
-                        )}\
+                        )}
                       />
                       <FormField
                         control={profileForm.control}
@@ -143,7 +143,7 @@ const ProfilePage = () => {
                             </FormControl>
                              <FormMessage />
                           </FormItem>
-                        )}\
+                        )}
                       />
                       <Button type="submit">Save Changes</Button>
                     </form>
@@ -170,7 +170,7 @@ const ProfilePage = () => {
                             </FormControl>
                             <FormMessage />
                           </FormItem>
-                        )}\
+                        )}
                       />
                       <FormField
                         control={passwordForm.control}
@@ -183,7 +183,7 @@ const ProfilePage = () => {
                             </FormControl>
                             <FormMessage />
                           </FormItem>
-                        )}\
+                        )}
                       />
                        <FormField
                         control={passwordForm.control}
@@ -196,7 +196,7 @@ const ProfilePage = () => {
                             </FormControl>
                             <FormMessage />
                           </FormItem>
-                        )}\
+                        )}
                       />
                       <Button type="submit" variant="secondary">Update Password</Button>
                     </form>
