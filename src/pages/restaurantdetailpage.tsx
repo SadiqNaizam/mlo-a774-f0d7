@@ -80,7 +80,7 @@ const RestaurantDetailPage = () => {
 
         {/* Restaurant Header Section */}
         <section className="mb-8">
-            <div className="h-48 md:h-64 rounded-lg overflow-hidden bg-gray-200">
+            <div className="h-48 md:h-64 rounded-lg overflow-hidden bg-muted">
                 <img src={restaurantDetails.imageUrl} alt={`A view of ${restaurantDetails.name}`} className="w-full h-full object-cover"/>
             </div>
             <div className="mt-4">
@@ -108,7 +108,7 @@ const RestaurantDetailPage = () => {
                               </div>
                               <p className="font-medium">${(item.price * item.quantity).toFixed(2)}</p>
                             </div>
-                          ))}\
+                          ))}
                            <div className="border-t pt-4 mt-4 flex justify-between font-bold text-lg">
                             <p>Total</p>
                             <p>${cartTotal.toFixed(2)}</p>
@@ -125,7 +125,7 @@ const RestaurantDetailPage = () => {
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground mt-2">
                     <div className="flex items-center gap-1.5">
                         <Star className="w-4 h-4 text-yellow-500 fill-yellow-400"/>
-                        <span className="font-semibold text-gray-800">{restaurantDetails.rating}</span>
+                        <span className="font-semibold text-foreground">{restaurantDetails.rating}</span>
                         ({restaurantDetails.reviews} reviews)
                     </div>
                     <div className="flex items-center gap-1.5">
@@ -140,7 +140,7 @@ const RestaurantDetailPage = () => {
                 <div className="mt-3 flex flex-wrap gap-2">
                     {restaurantDetails.cuisineTypes.map(cuisine => (
                         <Badge key={cuisine} variant="outline">{cuisine}</Badge>
-                    ))}\
+                    ))}
                 </div>
             </div>
         </section>
@@ -153,10 +153,10 @@ const RestaurantDetailPage = () => {
                 <div key={category}>
                     <h3 className="text-xl font-semibold mb-4 capitalize border-b pb-2">{category}</h3>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                        {items.map(item => <MenuItemCard key={item.id} {...item} />)}\
+                        {items.map(item => <MenuItemCard key={item.id} {...item} />)}
                     </div>
                 </div>
-            ))}\
+            ))}
           </div>
         </section>
       </main>
