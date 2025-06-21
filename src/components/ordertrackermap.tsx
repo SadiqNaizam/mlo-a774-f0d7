@@ -23,7 +23,7 @@ const MapPin = ({
           <div className={`w-12 h-12 rounded-full flex items-center justify-center shadow-lg ${color}`}>
             <Icon className="w-6 h-6 text-white" />
           </div>
-          <div className="mt-2 px-2 py-1 bg-white/90 backdrop-blur-sm rounded-md text-xs font-semibold shadow-md">
+          <div className="mt-2 px-2 py-1 bg-popover/90 text-popover-foreground backdrop-blur-sm rounded-md text-xs font-semibold shadow-md">
             {label}
           </div>
           {children}
@@ -46,20 +46,20 @@ const OrderTrackerMap = () => {
         <CardDescription>Your order is on its way! Watch its progress below.</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="relative w-full h-[450px] bg-gray-100 rounded-lg overflow-hidden border">
+        <div className="relative w-full h-[450px] bg-muted rounded-lg overflow-hidden border">
           {/* Static map background */}
           <img
             src="https://placehold.co/1200x800/e2e8f0/cbd5e1?text=City+Map"
             alt="Map view of the city"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-20 dark:opacity-10"
           />
 
           {/* Dashed line representing the route */}
           <div 
-            className="absolute top-1/2 left-1/2 w-[60%] h-px bg-transparent"
+            className="absolute top-1/2 left-1/2 w-[60%] h-px bg-transparent opacity-50"
             style={{
               transform: 'translate(-50%, -50%) rotate(-30deg)',
-              backgroundImage: 'linear-gradient(to right, #6b7280 40%, transparent 0%)',
+              backgroundImage: 'linear-gradient(to right, hsl(var(--foreground)) 40%, transparent 0%)',
               backgroundSize: '15px 2px',
               backgroundRepeat: 'repeat-x',
             }}
@@ -70,7 +70,7 @@ const OrderTrackerMap = () => {
             icon={UtensilsCrossed}
             label="The Gourmet Place"
             position="top-[25%] left-[20%]"
-            color="bg-orange-500"
+            color="bg-primary"
           />
 
           {/* Delivery Address Pin */}
