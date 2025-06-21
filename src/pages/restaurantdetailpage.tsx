@@ -54,7 +54,7 @@ const RestaurantDetailPage = () => {
   const cartTotal = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen bg-transparent">
       <Header />
 
       <main className="flex-grow container py-6 sm:py-8">
@@ -108,7 +108,7 @@ const RestaurantDetailPage = () => {
                               </div>
                               <p className="font-medium">${(item.price * item.quantity).toFixed(2)}</p>
                             </div>
-                          ))}
+                          ))}\
                            <div className="border-t pt-4 mt-4 flex justify-between font-bold text-lg">
                             <p>Total</p>
                             <p>${cartTotal.toFixed(2)}</p>
@@ -140,7 +140,7 @@ const RestaurantDetailPage = () => {
                 <div className="mt-3 flex flex-wrap gap-2">
                     {restaurantDetails.cuisineTypes.map(cuisine => (
                         <Badge key={cuisine} variant="outline">{cuisine}</Badge>
-                    ))}
+                    ))}\
                 </div>
             </div>
         </section>
@@ -153,10 +153,10 @@ const RestaurantDetailPage = () => {
                 <div key={category}>
                     <h3 className="text-xl font-semibold mb-4 capitalize border-b pb-2">{category}</h3>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                        {items.map(item => <MenuItemCard key={item.id} {...item} />)}
+                        {items.map(item => <MenuItemCard key={item.id} {...item} />)}\
                     </div>
                 </div>
-            ))}
+            ))}\
           </div>
         </section>
       </main>
