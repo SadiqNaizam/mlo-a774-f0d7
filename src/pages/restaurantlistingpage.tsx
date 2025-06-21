@@ -100,7 +100,7 @@ const RestaurantListingPage = () => {
   console.log('RestaurantListingPage loaded');
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen bg-transparent">
       <Header />
       <main className="flex-grow">
         <div className="container py-6 sm:py-8">
@@ -140,7 +140,7 @@ const RestaurantListingPage = () => {
                           <Checkbox id={item.toLowerCase()} />
                           <Label htmlFor={item.toLowerCase()} className="font-normal">{item}</Label>
                         </div>
-                      ))}
+                      ))}\
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="rating">
@@ -148,10 +148,10 @@ const RestaurantListingPage = () => {
                     <AccordionContent className="space-y-2 pt-2">
                       {['4.5 stars & up', '4 stars & up', '3 stars & up'].map((item) => (
                         <div key={item} className="flex items-center space-x-2">
-                          <Checkbox id={item.replace(/\s/g, '').toLowerCase()} />
-                          <Label htmlFor={item.replace(/\s/g, '').toLowerCase()} className="font-normal">{item}</Label>
+                          <Checkbox id={item.replace(/\\s/g, '').toLowerCase()} />
+                          <Label htmlFor={item.replace(/\\s/g, '').toLowerCase()} className="font-normal">{item}</Label>
                         </div>
-                      ))}
+                      ))}\
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="delivery_time">
@@ -159,10 +159,10 @@ const RestaurantListingPage = () => {
                     <AccordionContent className="space-y-2 pt-2">
                       {['Under 30 min', 'Under 45 min'].map((item) => (
                         <div key={item} className="flex items-center space-x-2">
-                          <Checkbox id={item.replace(/\s/g, '').toLowerCase()} />
-                          <Label htmlFor={item.replace(/\s/g, '').toLowerCase()} className="font-normal">{item}</Label>
+                          <Checkbox id={item.replace(/\\s/g, '').toLowerCase()} />
+                          <Label htmlFor={item.replace(/\\s/g, '').toLowerCase()} className="font-normal">{item}</Label>
                         </div>
-                      ))}
+                      ))}\
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -190,7 +190,7 @@ const RestaurantListingPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 {restaurantData.map((restaurant) => (
                   <RestaurantCard key={restaurant.slug} {...restaurant} />
-                ))}
+                ))}\
               </div>
 
               {/* Pagination */}
