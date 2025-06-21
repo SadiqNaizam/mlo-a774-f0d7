@@ -101,7 +101,7 @@ const Homepage = () => {
       <Header />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative py-20 sm:py-28 md:py-32 bg-orange-50/50">
+        <section className="relative py-20 sm:py-28 md:py-32 bg-muted">
           <div className="container relative text-center">
             <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
               Your next meal, <span className="text-primary">delivered.</span>
@@ -135,19 +135,19 @@ const Homepage = () => {
                   cuisine={cat.name}
                   icon={cat.icon}
                 />
-              ))}\
+              ))}
             </div>
           </div>
         </section>
 
         {/* Popular Near You Section */}
-        <section className="py-12 bg-muted/30 md:py-16">
+        <section className="py-12 bg-muted/50 md:py-16">
           <div className="container">
             <h2 className="mb-8 text-3xl font-bold tracking-tight text-center">Popular Near You</h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {popularRestaurants.map((resto) => (
                 <RestaurantCard key={resto.slug} {...resto} />
-              ))}\
+              ))}
             </div>
           </div>
         </section>
@@ -159,7 +159,7 @@ const Homepage = () => {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {newRestaurants.map((resto) => (
                 <RestaurantCard key={resto.slug} {...resto} />
-              ))}\
+              ))}
             </div>
              <div className="mt-12 text-center">
                 <Button asChild size="lg" variant="outline">
