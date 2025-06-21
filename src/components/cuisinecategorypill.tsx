@@ -17,7 +17,7 @@ const CuisineCategoryPill: React.FC<CuisineCategoryPillProps> = ({ cuisine, icon
   return (
     <Button
       variant="outline"
-      className={`h-12 rounded-full border-gray-300 bg-white px-6 text-base font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-100 hover:shadow-md focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 ${className}`}
+      className={`h-12 rounded-full px-6 text-base font-medium shadow-sm transition-all hover:shadow-md focus:ring-2 focus:ring-ring focus:ring-offset-2 ${className}`}
       asChild
     >
       <Link to={destinationUrl} aria-label={`Find ${cuisine} restaurants`}>
