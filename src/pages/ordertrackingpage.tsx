@@ -42,7 +42,7 @@ const OrderTrackingPage = () => {
       <Header />
       <main className="flex-grow container mx-auto py-8 sm:py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          <Card className="w-full shadow-lg border-gray-200">
+          <Card className="w-full shadow-lg">
             <CardHeader className="text-center">
               <CardTitle className="text-3xl font-extrabold tracking-tight">Track Your Order</CardTitle>
               <CardDescription className="text-lg text-muted-foreground">Order #FD-8675309 from "The Gourmet Place"</CardDescription>
@@ -51,11 +51,11 @@ const OrderTrackingPage = () => {
               {/* Step-by-step visual tracker */}
               <div className="relative flex justify-between items-start">
                 <div
-                  className="absolute top-1/2 left-0 w-full h-1 -translate-y-1/2 bg-gray-200"
+                  className="absolute top-1/2 left-0 w-full h-1 -translate-y-1/2 bg-muted"
                   style={{ zIndex: 1 }}
                 >
                   <div
-                    className="h-full bg-orange-500 transition-all duration-500 ease-in-out"
+                    className="h-full bg-primary transition-all duration-500 ease-in-out"
                     style={{ width: `${(currentStageIndex / (orderStages.length - 1)) * 100}%` }}
                   />
                 </div>
@@ -63,14 +63,14 @@ const OrderTrackingPage = () => {
                   <div key={stage.status} className="z-10 flex flex-col items-center w-24">
                     <div
                       className={cn(
-                        "flex items-center justify-center w-12 h-12 rounded-full border-2 bg-white transition-all duration-500",
-                        index <= currentStageIndex ? "border-orange-500" : "border-gray-300"
+                        "flex items-center justify-center w-12 h-12 rounded-full border-2 bg-card transition-all duration-500",
+                        index <= currentStageIndex ? "border-primary" : "border-border"
                       )}
                     >
                       <stage.Icon
                         className={cn(
                           "w-6 h-6",
-                          index <= currentStageIndex ? "text-orange-600" : "text-gray-400"
+                          index <= currentStageIndex ? "text-primary" : "text-muted-foreground"
                         )}
                       />
                     </div>
@@ -83,13 +83,13 @@ const OrderTrackingPage = () => {
                       {stage.status}
                     </p>
                   </div>
-                ))}\
+                ))}
               </div>
               
               {/* Progress Bar and Status Text */}
               <div className="pt-4 text-center">
                 <Progress value={currentStage.progress} className="w-full h-2.5" />
-                <p className="mt-4 text-xl font-semibold text-gray-800 animate-pulse">
+                <p className="mt-4 text-xl font-semibold text-foreground animate-pulse">
                   {currentStage.status}...
                 </p>
               </div>
