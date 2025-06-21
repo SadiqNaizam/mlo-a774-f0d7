@@ -49,7 +49,7 @@ const CheckoutPage = () => {
   };
   
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen bg-transparent">
       <Header />
       <main className="flex-1 py-8">
         <div className="container mx-auto px-4">
@@ -115,7 +115,7 @@ const CheckoutPage = () => {
                            <Input id="cvc" placeholder="123" />
                         </div>
                       </div>
-                    )}
+                    )}\
                   </CardContent>
                 </Card>
               </div>
@@ -133,7 +133,7 @@ const CheckoutPage = () => {
                           <span className="text-muted-foreground">{item.name} x {item.quantity}</span>
                           <span>${(item.price * item.quantity).toFixed(2)}</span>
                         </li>
-                      ))}
+                      ))}\
                     </ul>
                     <Separator />
                     <div className="space-y-2 text-sm">
