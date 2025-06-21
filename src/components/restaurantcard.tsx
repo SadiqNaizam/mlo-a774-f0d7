@@ -29,13 +29,13 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
     return (
       <div className="flex items-center gap-1.5">
         <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
-        <span className="font-semibold text-gray-800">{value.toFixed(1)}</span>
+        <span className="font-semibold text-foreground">{value.toFixed(1)}</span>
       </div>
     );
   };
 
   return (
-    <Link to="/restaurant-detail" className="block group focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded-lg">
+    <Link to="/restaurant-detail" className="block group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg">
       <Card className="w-full overflow-hidden transition-all duration-300 ease-in-out border rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-1">
         <CardHeader className="p-0">
           <AspectRatio ratio={16 / 9}>
@@ -48,13 +48,13 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
         </CardHeader>
         <CardContent className="p-4 space-y-3">
           <div className="flex items-start justify-between gap-4">
-            <CardTitle className="text-lg font-bold tracking-tight group-hover:text-orange-600">
+            <CardTitle className="text-lg font-bold tracking-tight group-hover:text-primary">
               {name}
             </CardTitle>
             {renderRating(rating)}
           </div>
 
-          <div className="flex items-center justify-between text-sm text-gray-500">
+          <div className="flex items-center justify-between text-sm text-muted-foreground">
             <div className="flex flex-wrap items-center gap-2">
               {cuisineTypes.slice(0, 3).map((cuisine) => (
                 <Badge key={cuisine} variant="secondary" className="font-normal">
