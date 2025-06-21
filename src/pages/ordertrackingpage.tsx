@@ -38,7 +38,7 @@ const OrderTrackingPage = () => {
   const currentStage = orderStages[currentStageIndex];
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen bg-transparent">
       <Header />
       <main className="flex-grow container mx-auto py-8 sm:py-12 px-4">
         <div className="max-w-4xl mx-auto">
@@ -83,7 +83,7 @@ const OrderTrackingPage = () => {
                       {stage.status}
                     </p>
                   </div>
-                ))}
+                ))}\
               </div>
               
               {/* Progress Bar and Status Text */}
